@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --dark-gray: #26282B;
+}
+
+header {
+    height: 60px;
+    background-color: var(--dark-gray);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .container {
+    gap: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 884px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-search {
+    width: 100%;
+    align-items: center;
+    background-color: #393D40;
+    border-radius: 10px;
+    padding-left: 11px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.svg {
+    display: block;
+    color: #858585;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: all .3s ease;
+
+}
+
+.svg:hover {
+    transform: scale(1.3);
+    transition-duration: 300ms;
+}
+
+#search-input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    height: 40px;
+    margin-left: auto;
+    background-color: transparent;
+}
+
+button {
+    font-family: inherit;
+}
+
+.btn-auth {
+    background-color: #393D40;
+    color: rgb(212, 212, 212);
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-account {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.header-left {
+    min-width: 220px;
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    line-height: 40px;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(212, 212, 212);
+}
