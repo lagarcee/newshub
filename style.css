@@ -7,20 +7,23 @@
 body {
     font-family: "Roboto", sans-serif;
     min-width: 360px;
+    background-color: #26282B;
 }
 
 :root {
     --main-dark-gray: #26282B;
     --main-text-light-gray: #D4D4D4;
-    --light-gray: #393D40;
+    --gray: #393D40;
+    --header-search-gray: #4f4f4f;
+    --light-gray: #858585;
 }
+
 
 .header {
     height: 80px;
-    background-color: var(--main-dark-gray);
+    background-color: var(--gray);
     width: 100%;
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
 }
 
@@ -43,18 +46,19 @@ body {
     max-width: 640px;
     width: 100%;
     align-items: center;
-    /* background-color: var(--light-gray); */
+    /* background-color: var(--light); */
     height: 52px;
     display: flex;
     gap: 15px;
     flex-direction: row;
     justify-content: center;
+    
 }
 
 .header-search-inner {
     width: 100%;
     align-items: center;
-    background-color: var(--light-gray);
+    background-color: var(--main-dark-gray);
     border-radius: 10px;
     padding-left: 11px;
     height: 52px;
@@ -62,9 +66,13 @@ body {
     /* justify-content: center;  */
 }
 
+.header-search-inner:hover {
+    outline:2px solid var(--light-gray);
+}
+
 .svg {
     display: block;
-    color: #858585;
+    color: var(--header-search-gray);
     width: 25px;
     height: 25px;
     line-height: 52px;
@@ -93,6 +101,7 @@ body {
 
 #search-input::placeholder {
     font-size: 20px;
+    color: var(--light-gray);
 }
 
 .header-right {
@@ -115,10 +124,11 @@ body {
 button {
     font-family: inherit;
     font-size: 20px;
+    user-select: none;
 }
 
 .btn-auth {
-    background-color: var(--light-gray);
+    background-color: var(--main-dark-gray);
     color: var(--main-text-light-gray);
     width: auto;
     height: 52px;
@@ -127,6 +137,10 @@ button {
     padding-right: 25px;
     border: none;
     cursor: pointer;
+}
+
+.btn-auth:hover {
+    outline:2px solid var(--light-gray);
 }
 
 .btn-auth+.btn-auth {
@@ -168,8 +182,8 @@ button {
 }
 
 .sidebar {
-    background-color: aqua;
-    height: 330px;
+    background-color: var(--main-dark-gray);
+    max-height: 900px;
     width: 220px;
 }
 
@@ -178,12 +192,16 @@ button {
     line-height: 46px;
     width: 220px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--main-text-light-gray);
-    background-color: var(--light-gray);
+    background-color: var(--gray);
     padding-left: 12px;
     text-align: start;
+    user-select: none;
+}
 
+.sidebar-btn:hover {
+    outline:2px solid var(--light-gray);
 }
 
 .sidebar-btn+.sidebar-btn {
@@ -193,7 +211,7 @@ button {
 .content {
     background-color: blue;
     width: 640px;
-    height: 330px;
+    height: 100%;
 }
 
 .header-left-inner {
