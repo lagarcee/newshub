@@ -10,6 +10,26 @@ body {
     background-color: #26282B;
 }
 
+::-webkit-scrollbar {
+    width: 9px;
+    margin:20px 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px black;
+    border-radius: 10px;
+    margin:20px 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #26282B;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #26282B;
+}
+
 :root {
     --main-dark-gray: #26282B;
     --main-text-light-gray: #D4D4D4;
@@ -17,7 +37,6 @@ body {
     --header-search-gray: #4f4f4f;
     --light-gray: #858585;
 }
-
 
 .header {
     height: 80px;
@@ -46,13 +65,12 @@ body {
     max-width: 640px;
     width: 100%;
     align-items: center;
-    /* background-color: var(--light); */
     height: 52px;
     display: flex;
     gap: 15px;
     flex-direction: row;
     justify-content: center;
-    
+
 }
 
 .header-search-inner {
@@ -63,11 +81,10 @@ body {
     padding-left: 11px;
     height: 52px;
     display: flex;
-    /* justify-content: center;  */
 }
 
 .header-search-inner:hover {
-    outline:2px solid var(--light-gray);
+    outline: 2px solid var(--light-gray);
 }
 
 .svg {
@@ -111,6 +128,7 @@ body {
     background-color: transparent;
     position: absolute;
     right: -300px;
+    gap: 15px;
 }
 
 .header-right-search {
@@ -139,12 +157,89 @@ button {
     cursor: pointer;
 }
 
-.btn-auth:hover {
-    outline:2px solid var(--light-gray);
+.btn-language {
+    background-color: var(--main-dark-gray);
+    color: var(--main-text-light-gray);
+    width: auto;
+    height: 52px;
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    cursor: pointer;
 }
 
-.btn-auth+.btn-auth {
-    margin-left: 24px;
+.btn-language:hover .header-right-languages {
+    outline: 2px solid var(--light-gray);
+}
+
+.header-right-languages {
+    position: relative;
+    /* display: none; */
+}
+
+.header-right-languages:hover {
+    display: block;
+}
+
+.header-right-languages:hover .clear-fix {
+    height: 35px;
+    width: 220px;
+    position: absolute;
+}
+
+/* .header-right-languages:hover .language { */
+.header-right-languages:hover .language {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.language {
+    min-height: 52px;
+    max-height: 475px;
+    position: absolute;
+    background-color: var(--gray);
+    border-radius: 0 20px 20px 20px;
+    transition: all .3s ease-in;
+    width: 220px;
+    padding: 10px;
+    outline: 1px solid var(--light-gray);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 15px;
+}
+
+.language::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+li {
+    padding-left: 25px;
+    padding-top: 15px;
+    height: 52px;
+    width: 200px;
+    border-radius: 15px;
+    background-color: var(--main-dark-gray);
+    color: var(--main-text-light-gray);
+}
+
+li+li {
+    margin-top: 10px;
+}
+
+.language li {
+    list-style-type: none;
+}
+
+.language li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--main-text-light-gray);
 }
 
 .account {
@@ -152,6 +247,8 @@ button {
     width: 52px;
     border-radius: 50%;
     background-color: #858585;
+    border: none;
+    cursor: pointer;
 }
 
 .header-left {
@@ -198,10 +295,11 @@ button {
     padding-left: 12px;
     text-align: start;
     user-select: none;
+    cursor: pointer;
 }
 
 .sidebar-btn:hover {
-    outline:2px solid var(--light-gray);
+    outline: 2px solid var(--light-gray);
 }
 
 .sidebar-btn+.sidebar-btn {
