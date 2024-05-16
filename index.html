@@ -76,10 +76,10 @@
 
             <div class="header-right">
                 <div class="header-right-languages">
-                    <button class="btn-language">Язык</button>
+                    <button id="button-language" class="btn-language">Язык</button>
                     <div class="clear-fix"></div>
                     <ul class="language">
-                        <li><a href="#">Русский</a></li>
+                        <li id="ru-lan"><a href="#">Русский</a></li>
                         <li><a href="#">Английский</a></li>
                         <li><a href="#">Португальский</a></li>
                         <li><a href="#">Португальский</a></li>
@@ -94,10 +94,10 @@
                 </div>
 
                 <div class="header-right-languages">
-                    <button class="btn-language">Страна</button>
+                    <button id="button-country" class="btn-language">Страна</button>
                     <div class="clear-fix"></div>
                     <ul class="language">
-                        <li><a href="#">Россия</a></li>
+                        <li id="ru-cnt"><a href="#">Россия</a></li>
                         <li><a href="#">США</a></li>
                         <li><a href="#">Португалия</a></li>
                         <li><a href="#">Португальский</a></li>
@@ -110,7 +110,7 @@
                         <li><a href="#">Португальский</a></li>
                     </ul>
                 </div>
-                <button class="account"></button>
+                <button id="account1" class="account"></button>
             </div>
         </div>
 
@@ -160,6 +160,18 @@
                 <a class="sidebar-btn">Свежее</a>
                 <a class="sidebar-btn">Свежее</a>
                 <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
+                <a class="sidebar-btn">Свежее</a>
             </div>
             <div class="content">
                 <div class="news-feed">
@@ -197,16 +209,35 @@
                 <div class="auth-window-logo">N4Y</div>
                 <div class="text-auth">Вход в аккаунт</div>
                 <div class="authorization">
-                    <input class="login" placeholder="Логин">
+                    <input class="name-user" placeholder="Email">
                     <input class="password" placeholder="Пароль">
-                    <div class="registration">Нет аккаунта?
-                        <a class="auth-window-reg" href="#">Зарегистрироваться</a>
+                    <div class="registration-window">Нет аккаунта?
+                        <a id="btn-reg" class="auth-window-reg" href="#">Зарегистрироваться</a>
                     </div>
                 </div>
                 <button class="btn-sigh-in">Войти</button>
             </div>
         </div>
+
+        <div id="reg" class="reg-window">
+            <div class="auth-window-header">
+                <img id="close-reg" class="close-icon" src="img/close-svgrepo-com.svg">
     
+            </div>
+            <div class="auth-window-content">
+                <div class="auth-window-logo">N4Y</div>
+                <div class="text-auth">Регистрация</div>
+                <div class="authorization">
+                    <input class="email" placeholder="Email">
+                    <input class="name-user" placeholder="Имя">
+                    <input class="password" placeholder="Пароль">
+                    <div class="registration-window">Есть аккаунт?
+                        <a id="btn-auth" class="auth-window-reg" href="#">Войти</a>
+                    </div>
+                </div>
+                <button class="btn-sigh-up">Зарегистрироваться</button>
+            </div>
+        </div>
 
     <script src="js/app.js"></script>
 </body>
