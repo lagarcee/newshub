@@ -118,15 +118,41 @@ document.addEventListener("DOMContentLoaded", function () {
         over.classList.remove("over-active")
     })
 
-    var ru_lan = document.getElementById("ru-lan");
-    var button_language = document.getElementById("button-language");
-    var ru_cnt = document.getElementById("ru-cnt");
-    var button_country = document.getElementById("button-country");
+    // var ru_lan = document.getElementById("ru-lan");
+    // var button_language = document.getElementById("button-language");
+    // var ru_cnt = document.getElementById("ru-cnt");
+    // var button_country = document.getElementById("button-country");
 
-    ru_lan.addEventListener("click", function () {
-        button_language.innerHTML = "Русский";
-    });
-    ru_cnt.addEventListener("click", function () {
-        button_country.innerHTML = "Россия";
-    });
+    // ru_lan.addEventListener("click", function () {
+    //     button_language.innerHTML = "Русский";
+    // });
+    // ru_cnt.addEventListener("click", function () {
+    //     button_country.innerHTML = "Россия";
+    // });
+
+    document.getElementById("language-ul").addEventListener("click", function (e) {
+        if (e.target && e.target.nodeName == "LI") {
+            document.getElementById("button-language").textContent = e.target.textContent;
+        }
+    })
+
+    document.getElementById("country-ul").addEventListener("click", function (e) {
+        if (e.target && e.target.nodeName == "LI") {
+            document.getElementById("button-country").textContent = e.target.textContent;
+        }
+    })
+
+    
 })
+
+const showDropdown = (content, button) => {
+    const dropdownContent = document.getElementById("dropdown-content"),
+        dropdownButton = document.getElementById("dropdown-button")
+
+    dropdownButton.addEventListener('click', () => {
+        dropdownContent.classList.toggle('show-dropdown')
+    })
+
+}
+
+showDropdown('dropdown-content', 'dropdown-button')

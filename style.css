@@ -190,6 +190,7 @@ button {
     background-color: var(--main-dark-gray);
     color: var(--main-text-light-gray);
     width: auto;
+    max-width: 192px;
     height: 52px;
     border-radius: 10px;
     padding-left: 25px;
@@ -581,6 +582,10 @@ li+li {
     outline: 2px solid var(--color-href-outline);
 }
 
+.btn-sigh-up:hover {
+    outline: 2px solid var(--color-href-outline);
+}
+
 .info-account {
     width: 640px;
     height: 500px;
@@ -614,17 +619,115 @@ li+li {
     background: var(--main-dark-gray);
 }
 
-.account-input + .account-input {
+.account-input+.account-input {
     margin-top: 10px;
 }
 
+.favorites {
+    margin-top: 35px;
+    display: grid;
+    /* place-items: center; */
+}
+
 .add-fovorites {
-    font-size: 16px;
+    font-size: 22px;
     color: var(--main-text-light-gray);
 }
 
+.dropdown {
+    margin-top: 100px;
+    position: relative;
+    width: max-content;
+    transform: translateY(-5rem);
+}
 
+.dropdown__button,
+.dropdown__item {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
 
+.dropdown__button {
+    border: none;
+    outline: none;
+    background-color: var(--main-dark-gray);
+    padding: 1.25rem;
+    border-radius: .75rem;
+    cursor: pointer;
+}
+
+.dropdown__menu {
+    list-style: none;
+    background-color: var(--light-gray);
+    padding: 1rem 1.25rem;
+    border-radius: .75rem;
+    display: grid;
+    row-gap: 1.5rem;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 4.5rem;
+    transform: scale(.1);
+    transform-origin: 10rem -2rem;
+    pointer-events: none;
+    transition: opacity .4s, transform .4s;
+    opacity: 0;
+}
+
+.dropdown__icons {
+    font-size: 1.25rem;
+    color: var(--light-gray);
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+}
+
+.dropdown__close,
+.dropdown__arrow {
+    position: absolute;
+    transition: opacity .1s, transform .4s;
+}
+
+.dropdown__close {
+    opacity: 0;
+}
+
+.dropdown__name {
+    font-weight: 500;
+    color: var(--main-text-gray);
+    text-align: center;
+    
+}
+
+.dropdown__item {
+    max-width: 160px;
+    margin-left: -20px;
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.dropdown__item:hover {
+    color: var(--main-text-light-gray);
+}
+
+.show-dropdown .dropdown__close {
+    opacity: 1;
+    transform: rotate(-180deg);
+}
+
+.show-dropdown .dropdown__arrow {
+    opacity: 0;
+    transform: rotate(-180deg);
+}
+
+.show-dropdown .dropdown__menu {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: initial;
+}
 
 @media screen and (max-width: 1370px) {
     .header-right-search {
